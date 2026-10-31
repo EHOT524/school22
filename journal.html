@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Электронный журнал — Школа №22</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="crumbs"><a href="index.html">Главная</a> / Электронный журнал</div>
+        <h1>Электронный журнал и дневник</h1>
+        <p>Оценки, домашние задания, расписание и посещаемость — в системе «Сетевой город. Образование» Краснодарского края.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal" style="margin-bottom:50px">
+          <div>
+            <h2>Войти в «Сетевой город»</h2>
+            <p>Вход для учеников, родителей и педагогов — через учётную запись Госуслуг (ЕСИА) или по логину школы.</p>
+          </div>
+          <a href="https://sgo.rso23.ru/" target="_blank" rel="noopener" class="btn btn-light">Открыть журнал ↗</a>
+        </div>
+
+        <div class="grid-3 reveal">
+          <div class="panel">
+            <h3>👨‍👩‍👧 Родителям</h3>
+            <p style="color:var(--muted)">Следите за успеваемостью ребёнка, домашними заданиями и сообщениями учителей.</p>
+          </div>
+          <div class="panel">
+            <h3>🎒 Ученикам</h3>
+            <p style="color:var(--muted)">Расписание, задания, оценки и материалы уроков всегда под рукой.</p>
+          </div>
+          <div class="panel">
+            <h3>👩‍🏫 Педагогам</h3>
+            <p style="color:var(--muted)">Ведение журнала, тематическое планирование и отчёты.</p>
+          </div>
+        </div>
+
+        <h2 style="margin-top:60px">Как войти</h2>
+        <details class="acc" open>
+          <summary>Вход через Госуслуги</summary>
+          <div class="acc-body">
+            <ol>
+              <li>Откройте <a href="https://sgo.rso23.ru/" target="_blank" rel="noopener">sgo.rso23.ru</a>.</li>
+              <li>Нажмите «Войти через Госуслуги».</li>
+              <li>Введите логин и пароль от подтверждённой учётной записи Госуслуг.</li>
+              <li>При первом входе свяжите учётную запись с данными в «Сетевом городе».</li>
+            </ol>
+          </div>
+        </details>
+        <details class="acc">
+          <summary>Мобильное приложение</summary>
+          <div class="acc-body">Электронный дневник доступен в мобильном приложении «Сетевой город. Образование» для Android и iOS, а также в приложении «Госуслуги Моя школа».</div>
+        </details>
+        <details class="acc">
+          <summary>Забыли пароль или нет доступа?</summary>
+          <div class="acc-body">Обратитесь к классному руководителю или к администратору электронного журнала школы по телефону <span data-school="phone"></span>.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты — Школа №22</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="crumbs"><a href="index.html">Главная</a> / Контакты</div>
+        <h1>Контакты</h1>
+        <p>Мы всегда рады ответить на ваши вопросы.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="panel">
+          <div class="contact-item"><span class="ico">📍</span><div><small>Адрес</small><b data-school="address"></b></div></div>
+          <div class="contact-item"><span class="ico">📞</span><div><small>Приёмная</small><b><a href="tel:+78612337229">+7 (861) 233-72-29</a></b></div></div>
+          <div class="contact-item"><span class="ico">☎️</span><div><small>Директор</small><b><a href="tel:+78612336725">+7 (861) 233-67-25</a></b></div></div>
+          <div class="contact-item"><span class="ico">✉️</span><div><small>Электронная почта</small><b><a href="mailto:school22@kubannet.ru">school22@kubannet.ru</a></b></div></div>
+          <div class="contact-item"><span class="ico">👩‍💼</span><div><small>Приём граждан директором</small><b data-school="director"></b><br><span data-school="directorHours"></span></div></div>
+          <div class="contact-item"><span class="ico">🕒</span><div><small>Режим работы</small><b data-school="hours"></b></div></div>
+        </div>
+
+        <div>
+          <div class="map-box">
+            <!-- Вставьте сюда код карты из конструктора Яндекс.Карт: https://yandex.ru/map-constructor/ -->
+            <div><div style="font-size:3rem">🗺️</div><p>Здесь будет карта проезда</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sky">
+      <div class="container" style="max-width:760px">
+        <h2>Обратная связь</h2>
+        <p style="color:var(--muted)">Задайте вопрос администрации школы. Официальные обращения также можно направить через <a href="https://www.gosuslugi.ru/" target="_blank" rel="noopener">Госуслуги</a>.</p>
+        <form class="form panel" data-demo>
+          <label>Ваше имя<input type="text" name="name" required></label>
+          <label>E-mail или телефон<input type="text" name="contact" required></label>
+          <label>Тема
+            <select name="topic">
+              <option>Общий вопрос</option>
+              <option>Приём в школу</option>
+              <option>Питание</option>
+              <option>Электронный журнал</option>
+              <option>Другое</option>
+            </select>
+          </label>
+          <label>Сообщение<textarea name="message" rows="5" required></textarea></label>
+          <label style="display:flex;gap:10px;align-items:flex-start;font-weight:500"><input type="checkbox" required style="margin-top:5px"> Согласен(на) на обработку персональных данных</label>
+          <button type="submit" class="btn btn-primary">Отправить</button>
+          <div class="form-ok">Спасибо! Ваше сообщение принято.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
