@@ -311,8 +311,24 @@ function renderBells(el) {
     </table></div>`;
 }
 
+function timetableTable(names, cell, rowCount) {
+  let rows = "";
+  for (let i = 0; i < rowCount; i++) {
+    rows += `<tr><td>${i + 1}</td>${names.map(d => `<td>${cell(d, i)}</td>`).join("")}</tr>`;
+  }
+  return `<div class="table-wrap"><table class="schedule-table">
+    <thead><tr><th>№</th>${names.map(d => `<th>${d}</th>`).join("")}</tr></thead>
+    <tbody>${rows}</tbody></table></div>`;
+}
+
 function renderTimetable(el) {
   const classes = Object.keys(TIMETABLE);
+  if (!classes.length) {
+    const week = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница"];
+    el.innerHTML = timetableTable(week, () => "—", BELLS.length);
+    return;
+  }
+
   const chips = document.createElement("div");
   chips.className = "chips";
   chips.innerHTML = classes.map((c, i) => `<button class="chip${i ? "" : " active"}" type="button">${c}</button>`).join("");
@@ -323,13 +339,7 @@ function renderTimetable(el) {
     const days = TIMETABLE[cls];
     const names = Object.keys(days);
     const max = Math.max(...names.map(d => days[d].length));
-    let rows = "";
-    for (let i = 0; i < max; i++) {
-      rows += `<tr><td>${i + 1}</td>${names.map(d => `<td>${days[d][i] || ""}</td>`).join("")}</tr>`;
-    }
-    box.innerHTML = `<div class="table-wrap"><table class="schedule-table">
-      <thead><tr><th>№</th>${names.map(d => `<th>${d}</th>`).join("")}</tr></thead>
-      <tbody>${rows}</tbody></table></div>`;
+    box.innerHTML = timetableTable(names, (d, i) => days[d][i] || "—", max);
   };
   chips.addEventListener("click", e => {
     if (!e.target.matches(".chip")) return;
